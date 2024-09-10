@@ -95,21 +95,22 @@ function convert() {
     const unitTo = document.getElementById('unitTo').value;
     const quantity = parseFloat(document.getElementById('quantity').value);
 
-     if (unitFrom === unitTo) {
+     
+    if (unitFrom === unitTo) {
         alert(`يبني انت مضحك !!؟؟؟ هو حد قالك ان ${quantity} ${unitFrom}  هيساوي ١000 ${unitTo} ؟؟؟ مختار نفس الوحدة ليه يبني ؟؟ ما تغير يلااا الوحدة وحط وحدة مختلفة عن اللي دخلتها.... مبلم ليه !!!؟؟؟`);
         return;
     }
 
-     if (unitTypeFrom !== unitTypeTo) {
+    if (unitTypeFrom !== unitTypeTo) {
         alert(`طيب بالله عليك يخي ازاي هتحول   ${unitFrom} ل ${unitTo} ؟؟  ليه بنتفلسف !!!! ولا انت بتختبرني يعني ؟؟؟ `);
 
         // alert('طيب بالله عليك يخي ازاي ');
         return; 
         // إيقاف العملية إذا كانت الوحدات غير متطابقة
     }
-    
+
     if (isNaN(quantity)) {
-        alert('الرجاء إدخال كمية صحيحة');
+        alert(' يعني ايه المغزى من انك متدخلش اي بيانات ومنتظر نتيجة ؟؟؟ لا والله بجد يعني ايه الفكرة عرفنا حضرتك !!؟؟ ما تدخل يسطا عدد عشان يتحول !!!');
         return;
     }
 
