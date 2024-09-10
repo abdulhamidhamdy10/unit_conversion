@@ -95,6 +95,11 @@ function convert() {
     const unitTo = document.getElementById('unitTo').value;
     const quantity = parseFloat(document.getElementById('quantity').value);
 
+     if (unitFrom === unitTo) {
+        alert(`يبني انت مضحك !!؟؟؟ هو حد قالك ان ${quantity} ${unitFrom}  هيساوي ١٠٠٠ ${unitTo} ؟؟؟ مختار نفس الوحدة ليه يلاا ؟؟!!!`);
+        return;
+    }
+
      if (unitTypeFrom !== unitTypeTo) {
         alert(`طيب بالله عليك يخي ازاي هتحول   ${unitFrom} ل ${unitTo} ؟؟  ليه بنتفلسف !!!! ولا انت بتختبرني يعني ؟؟؟ `);
 
