@@ -96,6 +96,11 @@ function convert() {
     const quantity = parseFloat(document.getElementById('quantity').value);
 
      
+     if (isNaN(quantity)) {
+        alert(' يعني ايه المغزى من انك متدخلش اي بيانات ومنتظر نتيجة ؟؟؟ لا والله بجد يعني ايه الفكرة عرفنا حضرتك !!؟؟ ما تدخل يسطا رقم عشان يتحول !!!');
+        return;
+    }
+
     if (unitFrom === unitTo) {
         alert(`يبني انت مضحك !!؟؟؟ هو حد قالك ان ${quantity} ${unitFrom}  هيساوي ١000 ${unitTo} ؟؟؟ مختار نفس الوحدة ليه يبني ؟؟ ما تغير يلااا الوحدة وحط وحدة مختلفة عن اللي دخلتها.... مبلم ليه !!!؟؟؟`);
         return;
@@ -107,11 +112,6 @@ function convert() {
         // alert('طيب بالله عليك يخي ازاي ');
         return; 
         // إيقاف العملية إذا كانت الوحدات غير متطابقة
-    }
-
-    if (isNaN(quantity)) {
-        alert(' يعني ايه المغزى من انك متدخلش اي بيانات ومنتظر نتيجة ؟؟؟ لا والله بجد يعني ايه الفكرة عرفنا حضرتك !!؟؟ ما تدخل يسطا عدد عشان يتحول !!!');
-        return;
     }
 
     const result = quantity * conversionRates[unitTypeFrom][unitFrom][unitTo];
