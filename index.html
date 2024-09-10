@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>تحويل الوحدات</title>
+</head>
+<body>
+    <div class="container">
+        <h1>تحويل الوحدات</h1>
+        
+        <label for="unitTypeFrom">اختر نوع الوحدة للتحويل منها:</label>
+        <select id="unitTypeFrom">
+            <option value="length">طول</option>
+            <option value="volume">حجم</option>
+            <option value="area">مساحة</option>
+            <option value="mass">كتلة</option>
+        </select>
+
+        <label for="unitFrom">اختر الوحدة التي تريد التحويل منها:</label>
+        <select id="unitFrom">
+            <!-- سيتم ملء الوحدات بناءً على نوع الوحدة المختار -->
+        </select>
+
+        <label for="unitTypeTo">اختر نوع الوحدة للتحويل إليها:</label>
+        <select id="unitTypeTo">
+            <option value="length">طول</option>
+            <option value="volume">حجم</option>
+            <option value="area">مساحة</option>
+            <option value="mass">كتلة</option>
+        </select>
+
+        <label for="unitTo">اختر الوحدة التي تريد التحويل إليها:</label>
+        <select id="unitTo">
+            <!-- سيتم ملء الوحدات بناءً على نوع الوحدة المختار -->
+        </select>
+
+        <label for="quantity">أدخل الكمية:</label>
+        <input type="number" id="quantity" placeholder="أدخل كمية" />
+
+        <button onclick="convert()">تحويل</button>
+
+        <h2>النتيجة: <span id="result">-</span></h2>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
