@@ -96,7 +96,7 @@ function convert() {
     const quantity = parseFloat(document.getElementById('quantity').value);
 
      if (unitFrom === unitTo) {
-        alert(`يبني انت مضحك !!؟؟؟ هو حد قالك ان ${quantity} ${unitFrom}  هيساوي ١٠٠٠ ${unitTo} ؟؟؟ مختار نفس الوحدة ليه يلاا ؟؟!!!`);
+        alert(`يبني انت مضحك !!؟؟؟ هو حد قالك ان ${quantity} ${unitFrom}  هيساوي ١000 ${unitTo} ؟؟؟ مختار نفس الوحدة ليه يبني ؟؟ ما تغير يلااا الوحدة وحط وحدة مختلفة عن اللي دخلتها.... مبلم ليه !!!؟؟؟`);
         return;
     }
 
