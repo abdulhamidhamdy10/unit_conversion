@@ -175,7 +175,7 @@ function convert() {
     const unitToIndex = unitsFrom.indexOf(unitTo);
 
     if (unitToIndex > unitFromIndex) {
-        const userConfirmed = confirm(`منطقيا مينفعش اللي انت بتعمله ده مينفعش تحول (${unitFrom}) ل (${unitTo}) عشان انت كدة بتحول من صغير لكبير .... بس هريحك  ... لو لسة  مُصِر عاللي في دماغك دوس ok لو ربنا هداك دوس cancel `);
+        const userConfirmed = confirm(`منطقيا مينفعش اللي انت بتعمله ده مينفعش تحول (${unitFrom}) ل (${unitTo}) عشان انت كدة بتحول من صغير لكبير .... بس هريحك  ... لو لسة  مُصِر عاللي في دماغك دوس ok (موافق ) لو ربنا هداك دوس cancel ( الغاء ) `);
         if (!userConfirmed) {
             return; // يلغي العملية إذا اختار المستخدم "Cancel"
         }
