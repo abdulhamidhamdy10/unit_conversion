@@ -162,7 +162,6 @@ function convert() {
 
 
     const result = quantity * conversionRates[unitTypeFrom][unitFrom][unitTo];
-    // document.getElementById('result').textContent = result.toFixed(2);
     // document.getElementById('result').textContent = `${quantity} ${unitFrom} = ${result.toFixed(4)} ${unitTo}`;
     document.getElementById('result').textContent = `${quantity} ${unitFrom} = ${parseFloat(result.toPrecision(12))} ${unitTo}`;
 
