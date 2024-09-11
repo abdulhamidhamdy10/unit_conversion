@@ -156,30 +156,7 @@ function convert() {
         // إيقاف العملية إذا كانت الوحدات غير متطابقة
     }
 
-     // Check if converting from smaller unit to larger unit
-    //  const unitsFrom = Object.keys(conversionRates[unitTypeFrom]);
-    //  const unitsTo = Object.keys(conversionRates[unitTypeFrom]);
- 
-    //  const unitFromIndex = unitsFrom.indexOf(unitFrom);
-    //  const unitToIndex = unitsTo.indexOf(unitTo);
-
-
-    //  const miniresult = quantity * conversionRates[unitTypeFrom][unitFrom][unitTo] ;
-    //  if ( unitToIndex > unitFromIndex) {
-    //      alert(`منطقيا مينفعش تحول (${unitFrom}) ل (${unitTo}) عشان انت كدة بتحول من صغير لكبير .... بس هريحك ال ${quantity} ${unitFrom} = ${parseFloat(miniresult.toPrecision(12))} ${unitTo}`);
-    //      return;
-    //  }
-
-    const unitsFrom = Object.keys(conversionRates[unitTypeFrom]);
-    const unitFromIndex = unitsFrom.indexOf(unitFrom);
-    const unitToIndex = unitsFrom.indexOf(unitTo);
-
-    if (unitToIndex > unitFromIndex) {
-        const userConfirmed = confirm(`منطقيا مينفعش اللي انت بتعمله ده مينفعش تحول (${unitFrom}) ل (${unitTo}) عشان انت كدة بتحول من صغير لكبير .... بس هريحك  ... لو لسة  مُصِر عاللي في دماغك دوس ok (موافق ) لو ربنا هداك دوس cancel ( الغاء ) `);
-        if (!userConfirmed) {
-            return; // يلغي العملية إذا اختار المستخدم "Cancel"
-        }
-    }
+     
 
 
 
