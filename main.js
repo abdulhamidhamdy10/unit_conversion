@@ -139,29 +139,40 @@ function convert() {
     const quantity = parseFloat(document.getElementById('quantity').value);
 
     if (isNaN(quantity)) {
-        alert(' يعني ايه المغزى من انك متدخلش اي بيانات ومنتظر نتيجة ؟؟؟ لا والله بجد يعني ايه الفكرة عرفنا حضرتك !!؟؟ ما تدخل يسطا رقم عشان يتحول !!!');
+        alert('من فضلك ! يجب ادخال قيمة ');
         return;
     }
 
     if (unitFrom === unitTo) {
-        alert(`يبني انت مضحك !!؟؟؟ هو حد قالك ان ${quantity} ${unitFrom}  هيساوي ١000 ${unitTo} ؟؟؟ مختار نفس الوحدة ليه يبني ؟؟ ما تغير يلااا الوحدة وحط وحدة مختلفة عن اللي دخلتها.... مبلم ليه !!!؟؟؟`);
+        alert(`يجب ادخال وحدات مختلفة `);
         return;
     }
 
     if (unitTypeFrom !== unitTypeTo) {
-        alert(`طيب بالله عليك يخي ازاي هتحول   ${unitFrom} ل ${unitTo} ؟؟  ليه بنتفلسف !!!! ولا انت بتختبرني يعني ؟؟؟ `);
+        alert(`لايمكن تحويل ${unitFrom} ل ${unitTo} ؟؟   `);
 
         // alert('طيب بالله عليك يخي ازاي ');
         return;
         // إيقاف العملية إذا كانت الوحدات غير متطابقة
     }
 
-     
+
+    const unitsFrom = Object.keys(conversionRates[unitTypeFrom]);
+    const unitFromIndex = unitsFrom.indexOf(unitFrom);
+    const unitToIndex = unitsFrom.indexOf(unitTo);
+
+    if (unitToIndex > unitFromIndex) {
+        const userConfirmed = confirm(`غير مطقيا تحويل (${unitFrom}) ل (${unitTo}) لكن اذا اردت الناتج اضغط ok اذا اردت الالغاء اضغط cancel `);
+        if (!userConfirmed) {
+            return; // يلغي العملية إذا اختار المستخدم "Cancel"
+        }
+    }
 
 
 
 
     const result = quantity * conversionRates[unitTypeFrom][unitFrom][unitTo];
+    // document.getElementById('result').textContent = result.toFixed(2);
     // document.getElementById('result').textContent = `${quantity} ${unitFrom} = ${result.toFixed(4)} ${unitTo}`;
     document.getElementById('result').textContent = `${quantity} ${unitFrom} = ${parseFloat(result.toPrecision(12))} ${unitTo}`;
 
